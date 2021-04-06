@@ -1,0 +1,26 @@
+DOMAINS
+ral=real
+
+PREDICATES
+
+Nondeterm expression_value(ral,ral,ral).  
+Nondeterm expression_value1(ral,ral,ral).
+Nondeterm expression_value2(ral,ral,ral).
+
+CLAUSES
+
+expression_value(X,Y,Z):- X>Y, X>Z,write("The biggestfrom 3 numbers is ", X),nl,!.
+ expression_value(X,Y,Z).
+expression_value1(X,Y,Z):- Y>X, Y>Z,write("The biggestfrom 3 numbers is ", Y),nl,!.
+expression_value1(X,Y,Z).
+expression_value2(X,Y,Z):- Z>Y, Z>X,write("The biggestfrom 3 numbers is ", Z),nl,!.
+ expression_value2(X,Y,Z).
+
+
+
+
+
+GOAL
+write("X="), readreal(X),  
+write("Y="), readreal(Y),
+write("Z="), readreal(Z), expression_value(

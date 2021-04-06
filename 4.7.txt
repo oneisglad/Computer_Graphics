@@ -1,0 +1,24 @@
+DOMAINS
+ral=real
+
+PREDICATES
+
+Nondeterm expression_value(ral,ral,ral).  
+
+
+
+CLAUSES
+
+expression_value(X,A,B):- A<X,X<B,write("YES").
+  
+
+
+
+
+
+
+
+GOAL
+write("X="), readreal(X), 
+write("A="), readreal(A),
+write("B="), readreal(B),expression_value(X,A,B),nl.
